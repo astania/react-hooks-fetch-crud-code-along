@@ -16,8 +16,8 @@ function Item({ item, onUpdateItem, onDeleteItem }) {
       .then(updatedItem => onUpdateItem(updatedItem))
   }
 
-  function handleDeleteClick(){
-    fetch(`http://localhost:4000/items/${item.id}`,{
+  function handleDeleteClick() {
+    fetch(`http://localhost:4000/items/${item.id}`, {
       method: "DELETE",
     })
       .then(r => r.json())
